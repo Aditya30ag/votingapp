@@ -12,7 +12,7 @@ export default function Signupadmin(props) {
   const navigate = useNavigate();
   const handleonClick = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/api/admin/createadmin";
+    const url = "https://votingapp-zcwd.onrender.com/api/admin/createadmin";
     const response = await fetch(url, {
       method: "POST",
       headers: {

@@ -9,7 +9,7 @@ export default function Admin(props) {
 
   const handleonClick = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/api/admin/loginadmin";
+    const url = "https://votingapp-zcwd.onrender.com/api/admin/loginadmin";
     const response = await fetch(url, {
       method: "POST",
       headers: {
