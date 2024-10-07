@@ -44,30 +44,24 @@ export default function Signup(props) {
   };
   return (
     <>
+      <div className="container1" style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center",position:"fixed",left: "50%",transform: "translateX(-50%)",zIndex:"10"}}>
       <div
         className="container"
         style={{
-          minHeight: "615px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
+          marginTop: "100px",
+          maxWidth: "500px",
+          minHeight: "370px",
+          border: "2px solid #EAEAEA",
+          boxSizing: "border-box",
+          paddingTop: "20px",
+          borderRadius: "12px",
+          boxShadow: "0px 10px 25px #000",
+          fontWeight:"700",
+          backgroundColor:"whitesmoke",//#E4F1E8
+          opacity:"0.8",
         }}
       >
-        <h1>Create a new Account</h1>
-        <div
-          className="container"
-          style={{
-            marginTop: "20px",
-            maxWidth: "500px",
-            minHeight: "440px",
-            border: "2px solid black",
-            boxSizing: "border-box",
-            paddingTop: "0px",
-            borderRadius: "4px",
-            boxShadow: "0px 10px 25px #000",
-          }}
-        >
+        <h3 style={{fontFamily:"arial",fontSmooth:"2px",fontWeight:"700",marginBottom:"20px"}}>Create account</h3>
           <form onSubmit={handleonClick}>
             <div className="mb-3 my-4">
               <label htmlFor="name" className="form-label">

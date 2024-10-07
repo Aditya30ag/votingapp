@@ -43,23 +43,24 @@ export default function Login(props) {
     setcontent("");
   };
   return (
-    <div className="container" style={{minHeight:'595px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-      <h1>
-        Login into a Account
-      </h1>
+    <div className="container1" style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center",position:"fixed",left: "50%",transform: "translateX(-50%)",zIndex:"10"}}>
       <div
         className="container"
         style={{
-          marginTop: "20px",
+          marginTop: "100px",
           maxWidth: "500px",
-          minHeight: "420px",
-          border: "2px solid black",
+          minHeight: "370px",
+          border: "2px solid #EAEAEA",
           boxSizing: "border-box",
-          paddingTop: "40px",
-          borderRadius: "4px",
+          paddingTop: "20px",
+          borderRadius: "12px",
           boxShadow: "0px 10px 25px #000",
+          fontWeight:"700",
+          backgroundColor:"whitesmoke",//#E4F1E8
+          opacity:"0.8",
         }}
       >
+        <h3 style={{fontFamily:"arial",fontSmooth:"2px",fontWeight:"700",marginBottom:"20px"}}>Login into a account</h3>
         <form onSubmit={handleonClick} style={{ columnGap: "20px" }}>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
