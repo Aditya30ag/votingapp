@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 // connectToMongo();
-const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/voteapp";
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://adityaagrwal3005:%231234aditya%23@votingapp.ttsj0.mongodb.net/?retryWrites=true&w=majority&appName=votingapp'
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
