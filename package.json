@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon backend/index.js",
+    "build": "npm install && npm install --prefix my-app && npm run build --prefix my-app",
+    "start": "nodemon backend/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "mongoose": "^8.5.0"
   },
   "devDependencies": {
+    "@types/node": "^22.7.4",
     "nodemon": "^3.1.3"
   }
 }
