@@ -12,6 +12,7 @@ export default function Signupadmin(props) {
   const password = document.querySelector("#exampleInputEmail1");
   const navigate = useNavigate();
   const handleonClick = async (e) => {
+    try{
     e.preventDefault();
     const url = '${apiUrl}/admin/createadmin';
     const response = await fetch(url, {
@@ -34,6 +35,9 @@ export default function Signupadmin(props) {
       props.showalert();
       password.style.border = "1px solid red";
       setcontent("User with this Email is already exist");
+    }
+  }catch (error) {
+      console.error('Error:', error);  // This will help you track the issue
     }
   };
   const onchange = async (e) => {
