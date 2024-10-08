@@ -20,11 +20,12 @@ const port = process.env.PORT || 5000;
 const _dirname=path.resolve();
 
 app.use(express.json());
-const corsoption={
-  origin:"https://votingapp-zcwd.onrender.com",
-  credentials:true
-}
-app.use(cors(corsoption));
+
+// const corsoption={
+//   origin:"https://votingapp-zcwd.onrender.com",
+//   credentials:true
+// }
+app.use(cors());
 
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
