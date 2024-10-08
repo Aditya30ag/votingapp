@@ -7,10 +7,7 @@ const path = require('path');
 
 // connectToMongo();
 const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://adityaagrwal3005:%231234aditya%23@votingapp.ttsj0.mongodb.net/?retryWrites=true&w=majority&appName=votingapp'
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 

@@ -23,10 +23,10 @@ router.post(
       if (admin) {
         return res.json({
           success: false,
-          error: "please enter a unique value for email",
+          error: "Email already in use",
         });
       }
-      const salt = await bcrypt.genSaltSync(10);
+      const salt = await bcrypt.genSalt(10);
       const secPass = await bcrypt.hash(req.body.password, salt);
 
       admin = await Admin.create({
@@ -44,7 +44,7 @@ router.post(
           id: admin.id,
         },
       };
-      var token1 = jwt.sign(data, "shhhhh");
+      var token1 = jwt.sign(data, process.env.JWT_SECRET || "defaultSecret");
       success = true;
       res.json({ success, token1 });
     } catch (error) {
