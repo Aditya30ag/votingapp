@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 // connectToMongo();
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://adityaagrwal3005:%231234aditya%23@votingapp.ttsj0.mongodb.net/?retryWrites=true&w=majority&appName=votingapp'
+const mongoURI = 'mongodb+srv://adityaagrwal3005:%231234aditya%23@votingapp.ttsj0.mongodb.net/?retryWrites=true&w=majority&appName=votingapp'
 mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
@@ -19,7 +19,7 @@ const _dirname=path.resolve();
 app.use(express.json());
 
 const corsoption={
-  origin:"https://votingapp-zcwd.onrender.com",
+  origin:["http://localhost:5000","https://votingapp-zcwd.onrender.com"],
   credentials:true
 }
 app.use(cors(corsoption));
