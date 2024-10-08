@@ -7,12 +7,13 @@ export default function Signupadmin(props) {
     email: "",
     password: "",
   });
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
   const [content, setcontent] = useState("");
   const password = document.querySelector("#exampleInputEmail1");
   const navigate = useNavigate();
   const handleonClick = async (e) => {
     e.preventDefault();
-    const url = "https://votingapp-zcwd.onrender.com/api/admin/createadmin";
+    const url = '${apiUrl}/admin/createadmin';
     const response = await fetch(url, {
       method: "POST",
       headers: {
